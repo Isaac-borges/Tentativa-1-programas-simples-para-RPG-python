@@ -8,10 +8,10 @@ def main():
         print("+-------Gerador de dados-------+", " ", "      1 - Rolar", " ", "      2 - Fim", " ", "+------------------------------+", sep="\n")
         opcao = get_opcao(' ')
         if opcao == 1:
-            os.system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
             rolagem(opcao)
         else : 
-            os.system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
             print('Até mais!')
         
 
@@ -43,11 +43,11 @@ def rolagem(opcao):
         elif (contagem + 1) == numdados :
             resultadoformatado += str(resultado) 
         contagem += 1
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     print(resultadoformatado)
     input("ENTER para continuar... ")
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
     
 
